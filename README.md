@@ -2,12 +2,46 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, you have to do 2 things:
+ ```
+ 1. create new file at top level of app(project) named as ".env.local"
+    and edit this file as(for this visit https://developers.facebook.com/ and create an app):
+    
+    FACEBOOK_CLIENT_ID= facebook client id (eg: 281460480300281 )
+    FACEBOOK_CLIENT_SECRET= facebook client secret (eg: 5ac49f5890f82f71262803ffe941e50e)
+    NEXTAUTH_URL= nextauth url (eg: http://localhost:3000  i.e. domain of website)
+    
+    
+ 2. replace the content of file firebase.js on the top level(for this visit https://firebase.google.com/ and "go to console" add project and copy config code) 
+    
+    #this
+    const firebaseConfig = {
+      apiKey: "AIzaSyDKCq04DBS3MAsg8C0B_ogw_-t6XYjHyvM",
+      authDomain: "socialapp-472b5.firebaseapp.com",
+      projectId: "socialapp-472b5",
+      storageBucket: "socialapp-472b5.appspot.com",
+      messagingSenderId: "849168702219",
+      appId: "1:849168702219:web:75da7cd1c693b35800600e",
+    };
+    
+    #into your app's firebaseConfig
+    const firebaseConfig = {
+      apiKey: "",
+      authDomain: "",
+      projectId: "",
+      storageBucket: "",
+      messagingSenderId: "",
+      appId: "",
+    };
+ 
+ ```
+
+Run the development server:
 
 ```bash
-npm run dev
+yarn run dev(if you are using yarn)
 # or
-yarn dev
+npm run dev(if you are using npm)
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
